@@ -1,0 +1,6 @@
+Download the source code for Adium 1.3.10.
+http://adiumx.cachefly.net/adium-1.3.10.tgz
+
+Build the following two frameworks and copy them to this directory.
+- AIUtilities.framework
+- Adium.framework
