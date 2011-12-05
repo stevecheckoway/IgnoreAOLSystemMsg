@@ -10,6 +10,10 @@
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		AA1526CB148CD68D003D8C25 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1526C9148CD68D003D8C25 /* Adium.framework */; };
 		AA1526CC148CD68D003D8C25 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1526CA148CD68D003D8C25 /* AIUtilities.framework */; };
+		AA15282F148CE8E1003D8C25 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1527F1148CE391003D8C25 /* Adium.framework */; };
+		AA152830148CE8E2003D8C25 /* AIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA1527F2148CE391003D8C25 /* AIUtilities.framework */; };
+		AA152835148CE941003D8C25 /* SCIgnoreAOLSystemMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8B00C511D4097000F4FDF6 /* SCIgnoreAOLSystemMsg.m */; };
+		AA152848148CEA48003D8C25 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		AA8B00C611D4097000F4FDF6 /* SCIgnoreAOLSystemMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = AA8B00C511D4097000F4FDF6 /* SCIgnoreAOLSystemMsg.m */; };
 /* End PBXBuildFile section */
 
@@ -18,9 +22,13 @@
 		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		8D5B49B6048680CD000E48DA /* IgnoreAOLSystemMsg.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IgnoreAOLSystemMsg.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "adium-1.3.10/Info.plist"; sourceTree = "<group>"; };
 		AA1526C9148CD68D003D8C25 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = "adium-1.3.10/Adium.framework"; sourceTree = "<group>"; };
 		AA1526CA148CD68D003D8C25 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = "adium-1.3.10/AIUtilities.framework"; sourceTree = "<group>"; };
+		AA1527F1148CE391003D8C25 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Adium.framework; path = "adium-head/Adium.framework"; sourceTree = "<group>"; };
+		AA1527F2148CE391003D8C25 /* AIUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AIUtilities.framework; path = "adium-head/AIUtilities.framework"; sourceTree = "<group>"; };
+		AA1527F3148CE391003D8C25 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "adium-head/Info.plist"; sourceTree = "<group>"; };
+		AA152827148CE8D0003D8C25 /* IgnoreAOLSystemMsg-devel.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IgnoreAOLSystemMsg-devel.AdiumPlugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8B00C511D4097000F4FDF6 /* SCIgnoreAOLSystemMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCIgnoreAOLSystemMsg.m; sourceTree = "<group>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
@@ -36,14 +44,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA152825148CE8D0003D8C25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA15282F148CE8E1003D8C25 /* Adium.framework in Frameworks */,
+				AA152830148CE8E2003D8C25 /* AIUtilities.framework in Frameworks */,
+				AA152848148CEA48003D8C25 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		089C166AFE841209C02AAC07 /* IgnoreAOLSystemMsg */ = {
 			isa = PBXGroup;
 			children = (
+				AA1527ED148CE31B003D8C25 /* head */,
+				AA1527EC148CE304003D8C25 /* 1.3.10 */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
-				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 			);
@@ -53,20 +72,10 @@
 		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				AA1526C9148CD68D003D8C25 /* Adium.framework */,
-				AA1526CA148CD68D003D8C25 /* AIUtilities.framework */,
 				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
 				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
 			);
 			name = "Frameworks and Libraries";
-			sourceTree = "<group>";
-		};
-		089C167CFE841241C02AAC07 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8D5B49B7048680CD000E48DA /* Info.plist */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		08FB77AFFE84173DC02AAC07 /* Classes */ = {
@@ -99,8 +108,29 @@
 			isa = PBXGroup;
 			children = (
 				8D5B49B6048680CD000E48DA /* IgnoreAOLSystemMsg.AdiumPlugin */,
+				AA152827148CE8D0003D8C25 /* IgnoreAOLSystemMsg-devel.AdiumPlugin */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AA1527EC148CE304003D8C25 /* 1.3.10 */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				AA1526C9148CD68D003D8C25 /* Adium.framework */,
+				AA1526CA148CD68D003D8C25 /* AIUtilities.framework */,
+			);
+			name = 1.3.10;
+			sourceTree = "<group>";
+		};
+		AA1527ED148CE31B003D8C25 /* head */ = {
+			isa = PBXGroup;
+			children = (
+				AA1527F3148CE391003D8C25 /* Info.plist */,
+				AA1527F1148CE391003D8C25 /* Adium.framework */,
+				AA1527F2148CE391003D8C25 /* AIUtilities.framework */,
+			);
+			name = head;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +153,23 @@
 			productReference = 8D5B49B6048680CD000E48DA /* IgnoreAOLSystemMsg.AdiumPlugin */;
 			productType = "com.apple.product-type.bundle";
 		};
+		AA152826148CE8D0003D8C25 /* IgnoreAOLSystemMsg-devel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA15282B148CE8D1003D8C25 /* Build configuration list for PBXNativeTarget "IgnoreAOLSystemMsg-devel" */;
+			buildPhases = (
+				AA152823148CE8D0003D8C25 /* Resources */,
+				AA152824148CE8D0003D8C25 /* Sources */,
+				AA152825148CE8D0003D8C25 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IgnoreAOLSystemMsg-devel";
+			productName = "IgnoreAOLSystemMsg-devel";
+			productReference = AA152827148CE8D0003D8C25 /* IgnoreAOLSystemMsg-devel.AdiumPlugin */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -143,9 +190,20 @@
 			projectRoot = "";
 			targets = (
 				8D5B49AC048680CD000E48DA /* IgnoreAOLSystemMsg */,
+				AA152826148CE8D0003D8C25 /* IgnoreAOLSystemMsg-devel */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA152823148CE8D0003D8C25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D5B49B1048680CD000E48DA /* Sources */ = {
@@ -156,6 +214,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA152824148CE8D0003D8C25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA152835148CE941003D8C25 /* SCIgnoreAOLSystemMsg.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -163,19 +229,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../adium-1.3.10/build/Deployment\"",
 					"\"$(SRCROOT)/adium-1.3.10\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = IgnoreAOLSystemMsg_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS = "ADIUM_VERSION=0x0103";
+				INFOPLIST_FILE = "adium-1.3.10/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PRODUCT_NAME = IgnoreAOLSystemMsg;
 			};
@@ -188,13 +251,12 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../adium-1.3.10/build/Deployment\"",
 					"\"$(SRCROOT)/adium-1.3.10\"",
 				);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				INFOPLIST_FILE = Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS = "ADIUM_VERSION=0x0103";
+				INFOPLIST_FILE = "adium-1.3.10/Info.plist";
 				PRODUCT_NAME = IgnoreAOLSystemMsg;
 			};
 			name = Release;
@@ -256,6 +318,7 @@
 					i386,
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = 4.0;
@@ -296,6 +359,62 @@
 			};
 			name = Release;
 		};
+		AA152829148CE8D1003D8C25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/adium-head\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "ADIUM_VERSION=0x0105";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "adium-head/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "IgnoreAOLSystemMsg-devel";
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		AA15282A148CE8D1003D8C25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/adium-head\"";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "ADIUM_VERSION=0x0105";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "adium-head/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "IgnoreAOLSystemMsg-devel";
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -313,6 +432,15 @@
 			buildConfigurations = (
 				1DEB913F08733D840010E9CD /* Debug */,
 				1DEB914008733D840010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA15282B148CE8D1003D8C25 /* Build configuration list for PBXNativeTarget "IgnoreAOLSystemMsg-devel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA152829148CE8D1003D8C25 /* Debug */,
+				AA15282A148CE8D1003D8C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

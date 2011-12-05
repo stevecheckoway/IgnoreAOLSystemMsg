@@ -28,10 +28,17 @@
  */
 
 #import <Cocoa/Cocoa.h>
-#import <Adium/AISharedAdium.h>
 #import <Adium/AIContentObject.h>
 #import <Adium/AIPlugin.h>
 #import <Adium/AIContentControllerProtocol.h>
+#import <Adium/AIListContact.h>
+
+/* ADIUM_VERSION is defined by the target settings. */
+#if ADIUM_VERSION >= 0x0105
+# define FILTER_PRIORITY_RETURN_TYPE CGFloat
+#else
+# define FILTER_PRIORITY_RETURN_TYPE float
+#endif
 
 
 @interface SCIgnoreAOLSystemMsg : AIPlugin <AIContentFilter>
@@ -65,9 +72,9 @@
 	return str;
 }
 
-- (float)filterPriority
+- (FILTER_PRIORITY_RETURN_TYPE)filterPriority
 {
-	return (float)DEFAULT_FILTER_PRIORITY;
+	return (FILTER_PRIORITY_RETURN_TYPE)DEFAULT_FILTER_PRIORITY;
 }
 
 @end
