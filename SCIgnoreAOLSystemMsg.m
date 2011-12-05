@@ -1,4 +1,4 @@
-/* Copyright (c) 2010, Stephen Checkoway
+/* Copyright (c) 2010-2011, Stephen Checkoway
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -67,7 +67,7 @@
 
 - (float)filterPriority
 {
-	return DEFAULT_FILTER_PRIORITY;
+	return (float)DEFAULT_FILTER_PRIORITY;
 }
 
 @end
