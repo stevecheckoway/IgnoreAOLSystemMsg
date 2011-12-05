@@ -1,0 +1,9 @@
+To compile IgnoreAOLSystemMsg for Adium 1.3.10 through 1.4.x on
+PowerPC and x86, follow the directions in adium-1.3.10/README and then
+build the IgnoreAOLSystemMsg target.
+
+To compile IgnoreAOLSystemMsg-devel for the latest development version
+of Adium on x86 and x86_64, follow the directions in adium-head/README
+and then build the IgnoreAOLSystemMsg-devel target. Note that this
+only worked at one single point in time (2011-12-05), and may not work
+for later versions of the code!
